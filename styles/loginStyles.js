@@ -45,10 +45,10 @@ export const loginStyles = StyleSheet.create({
         paddingHorizontal: 30,
     },
     button: {
-        marginTop: 50,
+        marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 20,
+        paddingVertical: 15,
         paddingHorizontal: 80,
         borderRadius: 80,
         elevation: 3,
@@ -68,8 +68,28 @@ export const loginStyles = StyleSheet.create({
         shadowColor: "#FBFFFF"
     },
     authBtns: {
-        marginTop: 50,
+        marginTop: 35,
         flex : 0.1,
-        flexDirection: "row"
+        flexDirection: "row",
+        justifyContent: "center"
+    },
+    extraMarg: {
+        marginHorizontal: 40
+    },
+    disText: {
+        color: "#fff",
+        
+    },
+    textBox:{
+        flex: 1,
+        paddingTop: 80,
+        // marginLeft: 40,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    yellow: {
+        color: "#FAD655"
     }
 })

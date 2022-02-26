@@ -9,7 +9,7 @@ import BackSVG from '../assets/images/backg.svg'
 import { welcomeStyles } from '../styles/welcomeStyles';
 import { useFonts } from '@use-expo/font';
 import GoogleLogo from '../assets/images/ggle.svg'
-
+import FbLogo from '../assets/images/fb.svg'
 export const Login = ({ navigation }) => {
     
     const arrow = "<"
@@ -68,13 +68,30 @@ export const Login = ({ navigation }) => {
             </View>
             <View style={loginStyles.authBtns}>
                 <Pressable
-                style={[loginStyles.roundBtn, loginStyles.bottomShadow]}
+                style={[loginStyles.roundBtn, loginStyles.bottomShadow, loginStyles.extraMarg]}
                 onPress={backToHome}
                 >
-                    <Text style={loginStyles.arrow}>
-                        {arrow}
-                    </Text>
+                    <GoogleLogo
+                        width="45"
+                    />
                 </Pressable>
+                <Pressable
+                style={[loginStyles.roundBtn, loginStyles.bottomShadow, loginStyles.extraMarg]}
+                onPress={backToHome}
+                >
+                    <FbLogo
+                        width="45"
+                        style={{
+                            marginLeft: 3
+                        }}
+                    />
+                </Pressable>
+            </View>
+            <View style={loginStyles.textBox}>
+                <Text style={loginStyles.disText}>
+                    By continuing you agree to our 
+                </Text>
+                <Text style={[loginStyles.disText , loginStyles.yellow]}> Terms of Services</Text><Text style={loginStyles.disText}> & </Text><Text style={[loginStyles.disText, loginStyles.yellow]}>Privacy Policy.</Text>
             </View>
         </View>
     )
