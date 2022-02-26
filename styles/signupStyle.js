@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import { Dimensions } from "react-native";
 
 
-export const loginStyles = StyleSheet.create({
+export const signUpStyles = StyleSheet.create({
     containerTop:{
         flex: 0.1,
         flexDirection: "row",
@@ -41,11 +41,11 @@ export const loginStyles = StyleSheet.create({
         marginTop: 4
     },
     formContainer:{
-        marginTop: 180,
+        marginTop: 105,
         paddingHorizontal: 30,
     },
     button: {
-        marginTop: 30,
+        marginTop: 80,
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 15,
@@ -83,6 +83,16 @@ export const loginStyles = StyleSheet.create({
     textBox:{
         flex: 1,
         paddingTop: 80,
+        // marginLeft: 40,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    textBox2:{
+        flex: 1,
+        paddingTop: 15,
+        marginBottom: -100,
         // marginLeft: 40,
         flexDirection: "row",
         flexWrap: "wrap",

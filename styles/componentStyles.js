@@ -10,5 +10,13 @@ export const componentStyles = StyleSheet.create({
         borderColor: "#fff",
         color: "#fff",
         marginTop: 90
+    },
+    textfield2 : {
+        fontFamily: "Poppinsreg",
+        fontSize: 25,
+        borderBottomWidth: 0.8,
+        borderColor: "#ECCA51",
+        color: "#fff",
+        marginTop: 50
     }
 })

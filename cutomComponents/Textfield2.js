@@ -3,14 +3,13 @@ import { TextInput } from "react-native";
 import { componentStyles } from "../styles/componentStyles";
 
 
-export const TextField = (prop) => {
+export const TextField2 = (prop) => {
     return(
         <TextInput
-            style={componentStyles.textfield}
+            style={componentStyles.textfield2}
             placeholder={prop.placeholder}
             secureTextEntry={prop.isPasswd}
             placeholderTextColor={prop.placeColor}
-            
         />
     )
 }

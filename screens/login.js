@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, Button, Pressable, Alert, TextInput} from 'react-native';
 import { Dimensions } from 'react-native';
 import LogoSvg from '../assets/images/myShare.svg'
@@ -10,12 +10,23 @@ import { welcomeStyles } from '../styles/welcomeStyles';
 import { useFonts } from '@use-expo/font';
 import GoogleLogo from '../assets/images/ggle.svg'
 import FbLogo from '../assets/images/fb.svg'
+import { componentStyles } from '../styles/componentStyles';
+
 export const Login = ({ navigation }) => {
     
+    const [uname, setUname] = useState("Empty")
+    const [passwd, setPasswd] = useState("Empty")
+
     const arrow = "<"
     const backToHome = () => {
-        navigation.navigate('Welcome')
+        navigation.goBack()
     }
+
+    const authenticate = () => {
+        console.log(uname)
+        console.log(passwd)
+    }
+
     return(
         // Body
         <View style={global.back}>
@@ -44,16 +55,23 @@ export const Login = ({ navigation }) => {
                 />
             </View>
             <View style={loginStyles.formContainer}>
-                
-                <TextField
+                <TextInput
+                    style={componentStyles.textfield}
                     placeholder="Email Id"
-                    isPasswd={false}
-                    placeColor={"#ffffff73"}
+                    secureTextEntry={false}
+                    placeholderTextColor="#ffffff73"
+                    onChangeText={(text) => {
+                        setUname(text)
+                    }}
                 />
-                <TextField
+                <TextInput
+                    style={componentStyles.textfield}
                     placeholder="Password"
-                    isPasswd={true}
-                    placeColor={"#ffffff73"}
+                    secureTextEntry={true}
+                    placeholderTextColor="#ffffff73"
+                    onChangeText={(text) => {
+                        setPasswd(text)
+                    }}
                 />
                 <Pressable 
                 style={[welcomeStyles.noBodyBtn, global.left]}
@@ -61,7 +79,7 @@ export const Login = ({ navigation }) => {
                     <Text style={[welcomeStyles.buttonTxt, welcomeStyles.yellow]}>Forgot Passwod?</Text>
                 </Pressable>
                 <Pressable style={[loginStyles.button, loginStyles.bottomShadow]}
-                // onPress={onClick}
+                onPress={authenticate}
                 >
                     <Text style={loginStyles.btnText}>Login</Text>
                 </Pressable>

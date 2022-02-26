@@ -11,7 +11,11 @@ const greetImage = require('../assets/images/back.png')
 export const Welcome = ({ navigation }) => {
 
     const onClick = () =>{
-        navigation.navigate('Login')
+        navigation.push('Login')
+    }
+
+    const onClickSign = () =>{
+      navigation.push('SignUp')
     }
 
     let [fontsLoaded] = useFonts({
@@ -55,6 +59,7 @@ export const Welcome = ({ navigation }) => {
             </Pressable>
             <Pressable 
               style={welcomeStyles.noBodyBtn}
+              onPress={onClickSign}
             >
               <Text style={[welcomeStyles.buttonTxt, welcomeStyles.yellow]}>Sign Up</Text>
             </Pressable>

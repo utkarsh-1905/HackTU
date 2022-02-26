@@ -6,8 +6,13 @@ import { useFonts } from '@use-expo/font';
 
 import { Welcome } from './screens/welcome';
 import { Login } from './screens/login';
-import Navigator from './routes/authStack'
+import Navigator from './routes/signUpstack'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SignUp } from './screens/signup';
 // import backImage from 'assets/back.png'
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   
@@ -17,7 +22,19 @@ const App = () => {
     'PoppinThin': require('./assets/fonts/Poppins-Light.ttf')
   })
   if(fontsLoaded){
-    return <Navigator/>
+    return(
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}
+        >
+          <Stack.Screen name="Welcome" component={Welcome} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    )
   }else{
     return (
       <View>
