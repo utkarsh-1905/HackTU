@@ -9,6 +9,7 @@ import { Login } from './screens/login';
 import Navigator from './routes/signUpstack'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { CardStyleInterpolators, StackViewTransitionConfigs } from 'react-navigation-stack';
 import { SignUp } from './screens/signup';
 // import backImage from 'assets/back.png'
 
@@ -26,7 +27,8 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerShown: false
+            headerShown: false,
+            animation: 'slide_from_right'
           }}
         >
           <Stack.Screen name="Welcome" component={Welcome} />

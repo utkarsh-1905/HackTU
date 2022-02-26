@@ -7,6 +7,8 @@ import {global} from '../styles/globalStyles'
 import { useFonts } from '@use-expo/font';
 const greetImage = require('../assets/images/back.png')
 // const logo = require('../assets/images/myShare.svg')
+import VectorUp from '../assets/images/VectorUp.svg';
+import VectorDown from '../assets/images/VectorDown.svg'
 
 export const Welcome = ({ navigation }) => {
 
@@ -26,6 +28,26 @@ export const Welcome = ({ navigation }) => {
 
     return(
         <View style={global.back}>
+          <VectorUp
+            width="530"
+            height="430"
+            style={{
+                position: 'absolute',
+                top: -170,
+                left: -125,
+                bottom: 0,
+            }} 
+          />
+          <VectorDown
+            width="530"
+            height="430"
+            style={{
+                position: 'absolute',
+                top: 600,
+                left: -95,
+                bottom: 0,
+            }} 
+          />
           <View style={welcomeStyles.containerTop}>
             <Image
             style={welcomeStyles.image}

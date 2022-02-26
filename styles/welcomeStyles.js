@@ -16,8 +16,7 @@ export const welcomeStyles = StyleSheet.create({
       marginTop: 30
     },
     conatainerMid: {
-      flex: 1,
-      alignItems: "flex-start",
+      textAlign:"center"
     },
     image: {
       width: 260,
@@ -25,18 +24,20 @@ export const welcomeStyles = StyleSheet.create({
     },
     titleFont: {
       fontSize: 38,
-      color: "#fcc317"
+      color: "#fcc317",
     },
     wlcmFont: {
       fontSize: 25,
       color: "#fff",
       // fontFamily: 'Poppins-SemiBold.ttf',
       fontFamily: 'PoppinsBold',
-      marginTop: 0,
-      marginLeft: 20,
+      // marginTop: 0,
+      marginLeft: 130,
     },
     containerText:{
       marginTop: -10,
+      textAlign: "center",
+      justifyContent: "center"
     },
     paraFont:{
       fontSize: 18,
@@ -54,7 +55,7 @@ export const welcomeStyles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       paddingVertical: 12,
-      paddingHorizontal: 90,
+      paddingHorizontal: 60,
       borderRadius: 80,
       elevation: 3,
       backgroundColor: '#272727',
